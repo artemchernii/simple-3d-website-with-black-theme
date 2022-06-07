@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gap: 1em;
+  --index: calc(1vw + 1vh);
+  --color-dark: #000;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Sans',
+    'DejaVu Sans', Verdana, sans-serif;
+  letter-spacing: 0.1em;
+  font-size: calc(var(--index) * 2.8);
+  font-weight: 200;
+  text-align: center;
+  opacity: 0.9;
+}
+.header span {
+  font-size: calc(var(--index) * 0.75);
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 1em;
+}
