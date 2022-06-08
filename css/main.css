@@ -39,13 +39,40 @@ body {
   width: 30vw;
   column-width: 2em;
   gap: var(--gap);
-  transform: scale(8.2);
+  transform: scale(8);
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.075, 1, 0.25, 1), opacity 1s;
+}
+.loaded .gallery {
+  opacity: 1;
+}
+
+.loaded .header span {
+  opacity: 0;
 }
 
 .gallery-item {
   margin-bottom: var(--gap);
+  transform: scale(1.01);
+  will-change: transform;
+  transition: 0.3s;
+}
+.gallery-item:hover {
+  transform: scale(1.03);
 }
 
 .gallery-item img {
   width: 100%;
+  display: block;
+}
+
+/* DARK MODE OS */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-dark);
+  }
+  .header {
+    filter: invert(100%);
+  }
 }
