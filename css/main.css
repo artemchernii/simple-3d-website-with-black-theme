@@ -5,7 +5,7 @@
 }
 
 :root {
-  --gap: 1em;
+  --gap: 0.5em;
   --index: calc(1vw + 1vh);
   --color-dark: #000;
 }
@@ -33,4 +33,19 @@ body {
   display: block;
   font-family: Helvetica, Arial, sans-serif;
   margin-top: 1em;
+}
+
+.gallery {
+  width: 30vw;
+  column-width: 2em;
+  gap: var(--gap);
+  transform: scale(8.2);
+}
+
+.gallery-item {
+  margin-bottom: var(--gap);
+}
+
+.gallery-item img {
+  width: 100%;
 }
